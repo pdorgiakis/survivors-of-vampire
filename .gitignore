@@ -1,0 +1,7 @@
+# CMake build tree
+build/
+
+# clangd index and bear/CMake compilation database
+.cache/
+compile_commands.json
+**/.DS_Store*
