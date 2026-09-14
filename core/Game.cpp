@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "../entities/MainPlayer.h"
 #include "raylib.h"
 #include <fstream>
 #include <raylib.h>
@@ -19,6 +20,7 @@ void Game::CreateWindow() {
 }
 
 void Game::Loop() {
+  MainPlayer player{};
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(WHITE);
