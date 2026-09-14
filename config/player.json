@@ -1,0 +1,14 @@
+{
+  "assets": [
+    {
+      "state": "idle",
+      "asset": "../assets/tileset/characters/male/player-Idle.png",
+      "max_frames": 4
+    },
+    {
+      "state": "walk",
+      "asset": "../assets/tileset/characters/male/player-Run.png",
+      "max_frames": 12
+    }
+  ]
+}
