@@ -3,13 +3,6 @@
 #include <fstream>
 #include <raylib.h>
 
-Game::Game() { LoadConfiguration(); }
-
-void Game::LoadConfiguration() {
-  std::ifstream c("../config/config.json");
-  configFile = json::parse(c);
-}
-
 void Game::Start() {
   CreateWindow();
   InitAudioDevice();
