@@ -14,6 +14,7 @@ struct Animation {
 };
 
 class GameActor : public Base {
+class GameActor {
 public:
   GameActor(map<State, Animation> animations, bool main_player)
       : animations(std::move(animations)), main_player(main_player) {};

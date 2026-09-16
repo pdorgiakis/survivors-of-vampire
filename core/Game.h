@@ -4,7 +4,7 @@
 using json = nlohmann::json;
 using namespace std;
 
-class Game : public Base {
+class Game {
 public:
   Game() = default;
   void Start();

@@ -6,7 +6,7 @@
 
 enum Type { PLAYER, ENEMY };
 
-class Assets : public Base {
+class Assets {
 public:
   Assets();
   ~Assets();

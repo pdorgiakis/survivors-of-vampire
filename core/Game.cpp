@@ -13,10 +13,10 @@ void Game::Start() {
 }
 
 void Game::CreateWindow() {
-  InitWindow(configFile["w_width"].get<int>(),
-             configFile["w_height"].get<int>(),
-             configFile["title"].get<string>().c_str());
-  SetTargetFPS(configFile["fps"].get<int>());
+  InitWindow(Base::instance().configFile["w_width"].get<int>(),
+             Base::instance().configFile["w_height"].get<int>(),
+             Base::instance().configFile["title"].get<string>().c_str());
+  SetTargetFPS(Base::instance().configFile["fps"].get<int>());
 }
 
 void Game::Loop() {
