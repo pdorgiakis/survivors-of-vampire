@@ -25,6 +25,7 @@ void Game::Loop() {
     BeginDrawing();
     ClearBackground(WHITE);
     // LOGIC START
+    player.tick(GetFrameTime());
     // LOGIC END
     EndDrawing();
   }
