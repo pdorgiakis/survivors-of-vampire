@@ -7,5 +7,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(raylib REQUIRED)
 find_package(nlohmann_json REQUIRED)
 
-add_executable(main main.cpp ./core/Game.cpp ./core/Assets.cpp ./entities/GameActor.cpp ./entities/MainPlayer.cpp)
+add_executable(main main.cpp ./core/Game.cpp ./core/Assets.cpp ./core/InputHandler.cpp ./entities/GameActor.cpp ./entities/MainPlayer.cpp)
 target_link_libraries(main PRIVATE raylib nlohmann_json::nlohmann_json)

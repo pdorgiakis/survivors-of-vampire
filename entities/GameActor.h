@@ -29,6 +29,8 @@ public:
   virtual void moveLeft() {}
   virtual void moveRight() {}
 
+  virtual void setState(State state) { state_ = state; }
+
 protected:
   // MEMBER FUNCTIONS
   virtual void draw();

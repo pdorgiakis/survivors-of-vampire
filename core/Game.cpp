@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "../core/InputHandler.h"
 #include "../entities/MainPlayer.h"
 #include "raylib.h"
 #include <fstream>
@@ -21,10 +22,13 @@ void Game::CreateWindow() {
 
 void Game::Loop() {
   MainPlayer player{};
+  InputHandler input_handler{&player};
+
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(WHITE);
     // LOGIC START
+    input_handler.handle();
     player.tick(GetFrameTime());
     // LOGIC END
     EndDrawing();
