@@ -1,7 +1,8 @@
 #include "GameActor.h"
 
 Rectangle GameActor::getSourceTexture() {
-  Rectangle source = {frame_ * getTextureWidth(), 0, getTextureWidth(),
+  Rectangle source = {frame_ * getTextureWidth(), 0,
+                      getTextureWidth() * rotation,
                       static_cast<float>(animations[state_].texture.height)};
   return source;
 }
@@ -39,7 +40,8 @@ void GameActor::tick(float delta_time) {
 
 void GameActor::calculateFrame(float delta_time) {
   running_time_ += delta_time;
-  if (running_time_ > update_time_) {
+  if (running_time_ >
+      update_time_ * (max_frames / animations[state_].max_frames)) {
     frame_ = (frame_ + 1) % animations[state_].max_frames;
     running_time_ = 0;
   }

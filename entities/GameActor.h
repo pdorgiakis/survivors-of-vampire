@@ -40,9 +40,10 @@ protected:
   virtual TransformedDimentions getTransformedDimentions();
   void calculateFrame(float delta_time);
   State state_{IDLE};
-  float size_{2.f};
+  float size_{1.5f};
   // Animation
-  float update_time_{1 / 8.f};
+  float update_time_{1 / 12.f};
+  int max_frames = 12;
   float running_time_{0};
   int frame_{0};
   float rotation{1.f};
